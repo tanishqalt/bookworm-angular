@@ -1,1 +1,30 @@
-<p>login-user works!</p>
+<div>
+  <div class="min-h-screen">
+    <div class="max-w-lg pt-20 m-auto">
+      <h1 class="text-xl font-bold">Login to Bookworm</h1>
+      <form>
+        <div class="flex flex-col mt-4 space-y-4">
+          <label htmlFor="username" class=""> Username </label>
+          <input
+            type="text"
+            id="username"
+            class="w-full px-4 py-2 border-2 rounded-sm"
+          />
+          <label htmlFor="password" class=""> Password </label>
+          <input
+            type="password"
+            id="password"
+            class="w-full px-4 py-2 border-2 rounded-sm"
+          />
+          <button
+            type="submit"
+            class="px-4 py-2 mt-4 text-sm bg-white rounded-sm ring-2"
+          >
+            Login
+          </button>
+          <p>Not a member yet? <a href="user/register">Register</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

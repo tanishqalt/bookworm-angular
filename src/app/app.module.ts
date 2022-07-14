@@ -14,6 +14,7 @@ import { ListOfUsersComponent } from './components/library/list-of-users/list-of
 import { ReadingRadarComponent } from './components/library/reading-radar/reading-radar.component';
 import { RequestListComponent } from './components/library/request-list/request-list.component';
 import { RegisterUserComponent } from './components/user/register-user/register-user.component';
+import { SingleBookComponent } from './components/user/single-book/single-book.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { RegisterUserComponent } from './components/user/register-user/register-
     ReadingRadarComponent,
     RequestListComponent,
     RegisterUserComponent,
+    SingleBookComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

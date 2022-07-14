@@ -15,10 +15,6 @@ import { UserProfileComponent } from './components/user/user-profile/user-profil
 
 const routes: Routes = [
   {
-    path: '',
-    component: AppComponent,
-  },
-  {
     path: 'user/book-browser',
     component: BookBrowserComponent,
   },
@@ -31,7 +27,7 @@ const routes: Routes = [
     component: BookPickerComponent,
   },
   {
-    path: 'user/register-user',
+    path: 'user/register',
     component: RegisterUserComponent,
   },
   {
@@ -43,7 +39,7 @@ const routes: Routes = [
     component: RequestFormComponent,
   },
   {
-    path: 'user/user-profile',
+    path: 'user/profile',
     component: UserProfileComponent,
   },
   // Library Components
