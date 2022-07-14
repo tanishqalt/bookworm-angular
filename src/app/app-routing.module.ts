@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { HomeComponent } from './components/home/home.component';
 import { InventoryComponent } from './components/library/inventory/inventory.component';
 import { ListOfUsersComponent } from './components/library/list-of-users/list-of-users.component';
 import { ReadingRadarComponent } from './components/library/reading-radar/reading-radar.component';
@@ -14,6 +15,10 @@ import { RequestFormComponent } from './components/user/request-form/request-for
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: HomeComponent,
+  },
   {
     path: 'user/book-browser',
     component: BookBrowserComponent,

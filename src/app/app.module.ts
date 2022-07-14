@@ -15,6 +15,7 @@ import { ReadingRadarComponent } from './components/library/reading-radar/readin
 import { RequestListComponent } from './components/library/request-list/request-list.component';
 import { RegisterUserComponent } from './components/user/register-user/register-user.component';
 import { SingleBookComponent } from './components/user/single-book/single-book.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { SingleBookComponent } from './components/user/single-book/single-book.c
     RequestListComponent,
     RegisterUserComponent,
     SingleBookComponent,
+    HomeComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
