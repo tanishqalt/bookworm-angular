@@ -1,28 +1,167 @@
-# BookwormAngular
+# Angular Project Submission
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.3.
+> Samantha Marino - N01356542
+> Merrybeth Alibadbad - N01436057
+> Balraj Singh - N01415998
+> Tanishq Sharma - N01452308
+> Chaitanya Pavuluri - N01452744
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Overview
 
-## Code scaffolding
+The Public Library is planning to expand their digital presence by offering a new service for book lovers all around. BookWorm is a universal network which connects library systems with their community of readers by offering a digital service to browse, rate, favourite and discover a variety of books within their system. Users can create an account linked to the library system, to which they can browse the available books and rediscover their love for reading.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Login Credentials <br>
+Username: Admin <br>
+Password: 12345
 
-## Build
+## Task List
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [x] Login and registration page by Tanishq
+- [x] Reading Profile by Tanishq
+- [x] Request Form by Samantha
+- [x] Inventory Page by Balraj
+- [x] Book Browser by Chaitanya
+- [x] Rating System by Samantha
+- [x] Reading list by Merrybeth
+- [x] Reading Radar by Balraj
+- [x] Search Bar by Chaitanya
+- [x] Book Generator by Merrybeth
 
-## Running unit tests
+**As instructed, 2 features each**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+---
 
-## Running end-to-end tests
+## Resources
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- For Designing, We have used [TailwindCSS](https://tailwindcss.com/) library. Tailwind is a utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.
+- For Deployment, We have used Heroku and localhost.
+- For Backend, We have used ExpressJS. The source code is available here [`Server Code`](https://github.com/tanishqalt/bookworm-server)
 
-## Further help
+---
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-# bookworm-angular
+## Learning Curve & Challenges
+
+- Primary challenge – Difficult understanding the binding between the component class and html file
+- Learning curve – Learnt about the components in angular, how routing works in Angular etc
+
+---
+
+## Database
+
+- We have used MongoDB Atlas for our database.
+
+Book model
+
+```
+const mongoose = require('mongoose');
+
+const bookSchema = new mongoose.Schema({
+    title: {
+        type: String,
+        required: true,
+    },
+    author: {
+        type: String,
+        required: true,
+    },
+    description: {
+        type: String,
+        required: true,
+    },
+    isbn: {
+        type: String,
+    },
+    timesRead: {
+        type: Number,
+        default: 0,
+    },
+    ratings: {
+        type: Array,
+    }
+}
+);
+
+const Book = mongoose.model('Book', bookSchema);
+
+// index on the book title
+bookSchema.index({ title: 'text' });
+
+// create index
+Book.createIndexes();
+
+
+module.exports = Book;
+```
+
+User Model
+
+```
+const mongoose = require('mongoose');
+
+const userSchema = new mongoose.Schema({
+    username: {
+        type: String,
+        required: true,
+    },
+    password: {
+        type: String,
+        required: true,
+    },
+    email: {
+        type: String,
+        required: true,
+    },
+    bio: {
+        type: String,
+    },
+    readingList: {
+        type: Array,
+        default: [],
+    },
+    userType: {
+        type: String,
+        default: 'user',
+    }
+})
+
+const User = mongoose.model('User', userSchema);
+module.exports = User;
+```
+
+RequestModel
+
+```
+/**
+ *  A simple database model that stores username, email, book title, and book author.
+ */
+
+const mongoose = require('mongoose');
+
+
+const requestSchema = new mongoose.Schema({
+        username: {
+            type: String,
+        },
+        bookTitle: {
+            type: String,
+        },
+        bookAuthor: {
+            type: String,
+        }
+    }
+);
+
+const BookRequest = mongoose.model('Request', requestSchema);
+
+module.exports = BookRequest;
+```
+
+![MongoDB Screenshot](./screenshot1.png)
+
+## Testing
+
+- We tested our APIs on localhost using Postman.
+
+![Postman Testing](./screenshot2.png)
