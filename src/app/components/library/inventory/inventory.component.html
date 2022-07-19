@@ -1,1 +1,98 @@
-<p>inventory works!</p>
+<div class="max-w-5xl p-20 m-auto">
+  <h1 class="text-2xl">Library Inventory</h1>
+  <div>
+    <table class="w-full mt-20 table-auto">
+      <thead>
+        <tr class="text-left">
+          <th class="p-4">Title</th>
+          <th class="p-4">Author</th>
+          <th class="p-4">ISBN</th>
+          <th class="p-4">Times Read</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr key="book._id">
+          <td class="table-cell p-4 bg-gray-50">book.title</td>
+          <td class="p-4">book.author</td>
+          <td class="p-4">book.isbn</td>
+          <td class="p-4">book.timesRead</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="max-w-5xl p-20 m-auto">
+      <h1 class="text-2xl">Add Book</h1>
+      <div>
+        <form onSubmit="handleSubmit">
+          <div class="flex flex-col">
+            <label
+              class="block mb-2 text-sm font-bold text-gray-700"
+              htmlFor="title"
+            >
+              Title
+            </label>
+            <input
+              class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+              id="title"
+              type="text"
+              placeholder="Title"
+              value="title"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label
+              class="block mb-2 text-sm font-bold text-gray-700"
+              htmlFor="author"
+            >
+              Author
+            </label>
+            <input
+              class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+              id="author"
+              type="text"
+              placeholder="Author"
+              value="author"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label
+              class="block mb-2 text-sm font-bold text-gray-700"
+              htmlFor="description"
+            >
+              Description
+            </label>
+            <input
+              class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+              id="description"
+              type="text"
+              placeholder="Description"
+              value="description"
+            />
+          </div>
+          <div class="flex flex-col">
+            <label
+              class="block mb-2 text-sm font-bold text-gray-700"
+              htmlFor="isbn"
+            >
+              ISBN
+            </label>
+            <input
+              class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+              id="isbn"
+              type="text"
+              placeholder="ISBN"
+              value="isbn"
+            />
+          </div>
+          <div class="flex flex-col mt-4">
+            <button
+              class="px-4 py-2 font-bold text-white bg-blue-500 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline"
+              type="submit"
+            >
+              Add Book
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
