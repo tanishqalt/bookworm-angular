@@ -18,16 +18,8 @@ Password: 12345
 
 ## Task List
 
-- [x] Login and registration page by Tanishq
-- [x] Reading Profile by Tanishq
-- [x] Request Form by Samantha
-- [x] Inventory Page by Balraj
-- [x] Book Browser by Chaitanya
-- [x] Rating System by Samantha
-- [x] Reading list by Merrybeth
-- [x] Reading Radar by Balraj
-- [x] Search Bar by Chaitanya
-- [x] Book Generator by Merrybeth
+- [x] Create the user interface with Angular for your project
+- [x] Add navigation using Angular Router
 
 **As instructed, 2 features each**
 
