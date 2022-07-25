@@ -17,6 +17,7 @@ import { RequestListComponent } from './components/library/request-list/request-
 import { RegisterUserComponent } from './components/user/register-user/register-user.component';
 import { SingleBookComponent } from './components/user/single-book/single-book.component';
 import { HomeComponent } from './components/home/home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,13 @@ import { HomeComponent } from './components/home/home.component';
     SingleBookComponent,
     HomeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

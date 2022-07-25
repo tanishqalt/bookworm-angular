@@ -1,17 +1,20 @@
 <div>
   <div class="min-h-screen">
     <div class="max-w-lg pt-20 m-auto">
+      <p class="text-red-600 p-5">{{ errormessage }}</p>
       <h1 class="text-xl font-bold">Login to Bookworm</h1>
-      <form>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <div class="flex flex-col mt-4 space-y-4">
           <label htmlFor="username" class=""> Username </label>
           <input
+            formControlName="username"
             type="text"
             id="username"
             class="w-full px-4 py-2 border-2 rounded-sm"
           />
           <label htmlFor="password" class=""> Password </label>
           <input
+            formControlName="password"
             type="password"
             id="password"
             class="w-full px-4 py-2 border-2 rounded-sm"
