@@ -37,4 +37,22 @@ export class UsersService {
       dataObject
     );
   }
+
+  // fetch user
+  fetchUser() {
+    return this.http.post(
+      'https://react-project-humber.herokuapp.com/user/get-user',
+      {
+        username: localStorage.getItem('username'),
+      }
+    );
+  }
+
+  // update user
+  updateUserBio(user: any) {
+    return this.http.post(
+      'https://react-project-humber.herokuapp.com/user/update-userbio',
+      user
+    );
+  }
 }
