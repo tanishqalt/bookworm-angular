@@ -12,4 +12,10 @@ export class BooksService {
       'https://react-project-humber.herokuapp.com/books/trending'
     );
   }
+
+  getRandomBook() {
+    return this.http.get(
+      'https://react-project-humber.herokuapp.com/books/random'
+    );
+  }
 }
