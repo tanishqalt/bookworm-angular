@@ -18,4 +18,10 @@ export class BooksService {
       'https://react-project-humber.herokuapp.com/books/random'
     );
   }
+
+  getBookbySearch(searchTerm: string) {
+    return this.http.get(
+      `https://react-project-humber.herokuapp.com/books/search/${searchTerm}`
+    );
+  }
 }

@@ -9,7 +9,8 @@
         type="text"
         class="p-3 my-4 border focus:ring-2"
         placeholder="Search for a book"
-        value="{keyword}"
+        (keyup)="onSearchChange($event.target)"
+        value="{{ searchTerm }}"
       />
     </div>
     <div class="mt-12">

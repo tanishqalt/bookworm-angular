@@ -18,16 +18,16 @@ Password: 12345
 
 ## Task List
 
-- [] Login and registration page by Tanishq
-- [] Reading Profile by Tanishq
+- [x] Login and registration page by Tanishq
+- [x] Reading Profile by Tanishq
 - [] Request Form by Samantha
 - [] Inventory Page by Balraj
 - [x] Book Browser by Chaitanya
 - [] Rating System by Samantha
-- [] Reading list by Merrybeth
+- [x] Reading list by Merrybeth
 - [] Reading Radar by Balraj
 - [] Search Bar by Chaitanya
-- [] Book Generator by Merrybeth
+- [x] Book Generator by Merrybeth
 
 **As instructed, 2 features each**
 

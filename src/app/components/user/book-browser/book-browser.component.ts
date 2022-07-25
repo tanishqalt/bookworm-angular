@@ -9,6 +9,7 @@ import { BooksService } from '../../../services/books.service';
 export class BookBrowserComponent implements OnInit {
   // create a variable to store books
   books: any;
+  searchTerm: string = '';
 
   constructor(private bookService: BooksService) {
     // async call to get books
@@ -20,19 +21,26 @@ export class BookBrowserComponent implements OnInit {
   }
 
   ngOnInit(): void {}
-}
 
-type Data = {
-  books: Array<{
-    id: number;
-    title: string;
-    author: string;
-    description: string;
-    ratings: Array<{
-      username: string;
-      rating: number;
-    }>;
-    timesRead: number;
-  }>;
-  success: boolean;
-};
+  // onSearchCahnge
+  onSearchChange(searchTerm: any) {
+    this.searchTerm = searchTerm.value;
+    console.log('searchTerm', this.searchTerm);
+
+    // if empty search term
+    if (this.searchTerm.length < 2) {
+      console.log('searchTerm', this.searchTerm);
+      this.bookService.getTrendingBooks().subscribe((data) => {
+        this.books = data;
+        this.books = this.books.books;
+      });
+    } else {
+      // call the search book function
+
+      this.bookService.getBookbySearch(this.searchTerm).subscribe((data) => {
+        this.books = data;
+        this.books = this.books.books;
+      });
+    }
+  }
+}
