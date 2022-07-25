@@ -16,7 +16,7 @@ export class UsersService {
   }
 
   // a function to register a new user
-  register(user: User) {
+  register(user: any) {
     return this.http.post(
       'https://react-project-humber.herokuapp.com/user/register',
       user

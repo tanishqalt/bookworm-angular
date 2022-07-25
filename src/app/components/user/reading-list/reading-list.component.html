@@ -2,14 +2,19 @@
   <div>
     <h1 class="text-3xl font-bold">Reading List</h1>
   </div>
-  <div class="flex mt-4">
-    <div class="p-6 bg-gray-50">
-      <h1 class="text-lg font-bold">book.title</h1>
-      <p class="text-base">Written by book.author <span> book.isbn </span></p>
-      <p class="text-sm">book.description</p>
-      <p class="mt-2 text-sm font-bold">
-        X bookworms are interested in this book
-      </p>
+  <div>
+    <div class="flex mt-4" *ngFor="let book of user?.readingList">
+      <div class="p-5 bg-gray-200">
+        <h1 class="text-lg font-bold">{{ book.title }}</h1>
+        <p class="text-base">
+          Written by {{ book.author }}
+          <span> ISBN# {{ book.isbn }} </span>
+        </p>
+        <p class="text-sm">{{ book.description }}</p>
+        <p class="mt-2 text-sm font-bold">
+          {{ book.timesRead }} bookworms are interested in this book
+        </p>
+      </div>
     </div>
   </div>
 </div>
