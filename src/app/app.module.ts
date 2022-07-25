@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 import { RequestFormComponent } from './components/user/request-form/request-form.component';
 import { ReadingListComponent } from './components/user/reading-list/reading-list.component';
@@ -35,7 +36,7 @@ import { HomeComponent } from './components/home/home.component';
     SingleBookComponent,
     HomeComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
