@@ -64,6 +64,13 @@ export class LoginUserComponent implements OnInit {
       if (response.success === false) {
         this.errormessage = response.message;
       } else {
+        // store the token in local storage
+        localStorage.setItem('webtoken', response.token);
+        // store the username in local storage
+        localStorage.setItem('username', response.user.username);
+
+        console.log(response);
+
         // if data.success is true
         // redirect to home page
         window.location.href = '/user/book-browser';

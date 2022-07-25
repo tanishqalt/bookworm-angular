@@ -22,4 +22,19 @@ export class UsersService {
       user
     );
   }
+
+  verify() {
+    // get the token from local storage
+    const token = localStorage.getItem('webtoken');
+    console.log('token', token);
+
+    const dataObject = {
+      token: token,
+    };
+
+    return this.http.post(
+      'https://react-project-humber.herokuapp.com/user/verify',
+      dataObject
+    );
+  }
 }
