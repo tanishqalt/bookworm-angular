@@ -55,4 +55,11 @@ export class UsersService {
       user
     );
   }
+
+  // get all users
+  getUsers() {
+    return this.http.get(
+      'https://react-project-humber.herokuapp.com/user/all-users'
+    );
+  }
 }

@@ -24,4 +24,12 @@ export class BooksService {
       `https://react-project-humber.herokuapp.com/books/search/${searchTerm}`
     );
   }
+
+  // add a new book
+  addBook(book: any) {
+    return this.http.post(
+      'https://react-project-humber.herokuapp.com/books/new',
+      book
+    );
+  }
 }

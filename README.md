@@ -20,7 +20,7 @@ Password: 12345
 
 - [x] Login and registration page by Tanishq
 - [x] Reading Profile by Tanishq
-- [] Request Form by Samantha
+- [x] Request Form by Samantha
 - [] Inventory Page by Balraj
 - [x] Book Browser by Chaitanya
 - [] Rating System by Samantha
