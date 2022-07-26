@@ -1,3 +1,4 @@
+<app-library-menu></app-library-menu>
 <div class="max-w-5xl pt-20 m-auto">
   <h1 class="text-4xl">Request List</h1>
   <div>
@@ -10,10 +11,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr key="request.id">
-          <td class="p-4">request.bookTitle</td>
-          <td class="p-4">request.bookAuthor</td>
-          <td class="p-4">request.username</td>
+        <tr *ngFor="let request of requests" key="request.id">
+          <td class="p-4">{{ request.bookTitle }}</td>
+          <td class="p-4">{{ request.bookAuthor }}</td>
+          <td class="p-4">{{ request.username }}</td>
         </tr>
       </tbody>
     </table>

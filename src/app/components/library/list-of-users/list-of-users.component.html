@@ -1,3 +1,4 @@
+<app-library-menu></app-library-menu>
 <div class="p-20 m-auto max-w-8xl">
   <h1 class="text-2xl">All Users</h1>
   <div>
@@ -10,10 +11,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr key="user._id">
-          <td class="p-4">user.username</td>
-          <td class="p-4">user.email</td>
-          <td class="p-4">user.bio</td>
+        <tr *ngFor="let user of users" key="user._id">
+          <td class="p-4">{{ user.username }}</td>
+          <td class="p-4">{{ user.email }}</td>
+          <td class="p-4">{{ user.bio }}</td>
         </tr>
       </tbody>
     </table>

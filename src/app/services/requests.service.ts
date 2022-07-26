@@ -14,4 +14,11 @@ export class RequestsService {
       request
     );
   }
+
+  // get all requests
+  getRequests() {
+    return this.http.get(
+      'https://react-project-humber.herokuapp.com/request/all'
+    );
+  }
 }

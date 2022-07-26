@@ -18,6 +18,7 @@ import { RegisterUserComponent } from './components/user/register-user/register-
 import { SingleBookComponent } from './components/user/single-book/single-book.component';
 import { HomeComponent } from './components/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LibraryMenuComponent } from './components/library-menu/library-menu.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     RegisterUserComponent,
     SingleBookComponent,
     HomeComponent,
+    LibraryMenuComponent,
   ],
   imports: [
     BrowserModule,
