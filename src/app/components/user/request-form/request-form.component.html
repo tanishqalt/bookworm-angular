@@ -5,33 +5,36 @@
     providers to fetch the specific book.
   </p>
 
-  <div class="mt-10 space-y-4">
-    <div>
-      <label class="text-sm font-medium">Book Title</label>
-      <input
-        class="w-full p-2 mt-2 border-2 border-gray-300 rounded-md"
-        type="text"
-        value="{bookTitle}"
-        placeholder="Enter book title"
-      />
-    </div>
+  <form [formGroup]="requestForm" (ngSubmit)="submitRequest()">
+    <div class="mt-10 space-y-4">
+      <div>
+        <label class="text-sm font-medium">Book Title</label>
+        <input
+          class="w-full p-2 mt-2 border-2 border-gray-300 rounded-md"
+          type="text"
+          formControlName="bookTitle"
+          placeholder="Enter book title"
+        />
+      </div>
 
-    <div>
-      <label class="mt-4 text-sm font-medium">Book Author</label>
-      <input
-        class="w-full p-2 mt-2 border-2 border-gray-300 rounded-md"
-        type="text"
-        value="{bookAuthor}"
-        placeholder="Enter book author"
-      />
-    </div>
+      <div>
+        <label class="mt-4 text-sm font-medium">Book Author</label>
+        <input
+          class="w-full p-2 mt-2 border-2 border-gray-300 rounded-md"
+          type="text"
+          formControlName="bookAuthor"
+          placeholder="Enter book author"
+        />
+      </div>
 
-    <div>
-      <button
-        class="w-full px-3 py-4 mt-6 text-sm font-medium text-white bg-blue-500 rounded-md"
-      >
-        <label class="text-sm font-medium">Request Book</label>
-      </button>
+      <div>
+        <button
+          type="submit"
+          class="w-full px-3 py-4 mt-6 text-sm font-medium text-white bg-blue-500 rounded-md"
+        >
+          Request Book
+        </button>
+      </div>
     </div>
-  </div>
+  </form>
 </div>

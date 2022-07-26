@@ -26,7 +26,7 @@ Password: 12345
 - [] Rating System by Samantha
 - [x] Reading list by Merrybeth
 - [] Reading Radar by Balraj
-- [] Search Bar by Chaitanya
+- [x] Search Bar by Chaitanya
 - [x] Book Generator by Merrybeth
 
 **As instructed, 2 features each**
