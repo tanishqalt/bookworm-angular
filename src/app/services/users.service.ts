@@ -62,4 +62,12 @@ export class UsersService {
       'https://react-project-humber.herokuapp.com/user/all-users'
     );
   }
+
+  // add to reading List
+  addToReadingList(data: any) {
+    return this.http.post(
+      'https://react-project-humber.herokuapp.com/user/update-user-readinglist',
+      data
+    );
+  }
 }

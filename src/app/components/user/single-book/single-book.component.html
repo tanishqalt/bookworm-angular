@@ -1,14 +1,19 @@
 <div>
   <div class="max-w-5xl pt-20 m-auto">
-    <h1 class="text-4xl font-bold">book.title</h1>
-    <p class="text-sm">ISBN# book.isbn</p>
-    <p class="mt-4">Description: book.description</p>
+    <h1 class="text-4xl font-bold">{{ book.title }}</h1>
+    <p class="text-sm">ISBN# {{ book.isbn }}</p>
+    <p class="mt-4">Description:{{ book.description }}</p>
     <hr class="my-4" />
-    <p class="text-red-700">This book has been read book.timesRead times!</p>
-    <p class="mt-8 italic">Author: book.author</p>
+    <p class="text-red-700">
+      This book has been read {{ book.timesRead }} times!
+    </p>
+    <p class="mt-8 italic">Author: {{ book.author }}</p>
 
     <div>
-      <button onClick="" class="p-3 mt-4 text-white bg-black rounded-xl">
+      <button
+        (click)="addToReadingList()"
+        class="p-3 mt-4 text-white bg-black rounded-xl"
+      >
         Add to reading list
       </button>
     </div>

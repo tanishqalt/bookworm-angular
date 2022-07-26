@@ -32,4 +32,11 @@ export class BooksService {
       book
     );
   }
+
+  // get a single book
+  getBook(id: string) {
+    return this.http.get(
+      `https://react-project-humber.herokuapp.com/books/${id}`
+    );
+  }
 }
