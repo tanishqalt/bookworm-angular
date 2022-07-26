@@ -17,19 +17,21 @@
       <div class="flex flex-wrap">
         <!-- Use ngFor and create a loop to iterate through "books" variable -->
         <div *ngFor="let book of books">
-          <div class="w-auto p-2">
-            <div class="p-5 bg-gray-200">
-              <h1 class="text-lg font-bold">{{ book.title }}</h1>
-              <p class="text-base">
-                Written by {{ book.author }}
-                <span> ISBN# {{ book.isbn }} </span>
-              </p>
-              <p class="text-sm">{{ book.description }}</p>
-              <p class="mt-2 text-sm font-bold">
-                {{ book.timesRead }} bookworms are interested in this book
-              </p>
+          <a href="{{ '/user/single-book/' + book._id }}">
+            <div class="w-auto p-2">
+              <div class="p-5 bg-gray-200">
+                <h1 class="text-lg font-bold">{{ book.title }}</h1>
+                <p class="text-base">
+                  Written by {{ book.author }}
+                  <span> ISBN# {{ book.isbn }} </span>
+                </p>
+                <p class="text-sm">{{ book.description }}</p>
+                <p class="mt-2 text-sm font-bold">
+                  {{ book.timesRead }} bookworms are interested in this book
+                </p>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>

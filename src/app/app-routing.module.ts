@@ -12,6 +12,7 @@ import { LoginUserComponent } from './components/user/login-user/login-user.comp
 import { ReadingListComponent } from './components/user/reading-list/reading-list.component';
 import { RegisterUserComponent } from './components/user/register-user/register-user.component';
 import { RequestFormComponent } from './components/user/request-form/request-form.component';
+import { SingleBookComponent } from './components/user/single-book/single-book.component';
 import { UserProfileComponent } from './components/user/user-profile/user-profile.component';
 
 const routes: Routes = [
@@ -30,6 +31,10 @@ const routes: Routes = [
   {
     path: 'user/book-picker',
     component: BookPickerComponent,
+  },
+  {
+    path: 'user/single-book/:id',
+    component: SingleBookComponent,
   },
   {
     path: 'user/register',
