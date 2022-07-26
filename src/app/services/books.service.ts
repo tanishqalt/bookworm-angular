@@ -47,4 +47,12 @@ export class BooksService {
       data
     );
   }
+
+  // update timesread
+  updateTimesRead(data: any) {
+    return this.http.post(
+      `https://react-project-humber.herokuapp.com/books/update-timesread`,
+      data
+    );
+  }
 }

@@ -40,6 +40,18 @@ export class SingleBookComponent implements OnInit {
       console.log(data);
       this.book = data;
       this.book = this.book.book;
+
+      // update times read
+      this.updateTimesRead();
+    });
+  }
+
+  updateTimesRead() {
+    const dataObject = {
+      id: this.id,
+    };
+    this.bookService.updateTimesRead(dataObject).subscribe((data) => {
+      console.log('TIMESREAD', data);
     });
   }
 
