@@ -11,11 +11,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr key="book._id">
-          <td class="table-cell p-4 bg-gray-50">book.title</td>
-          <td class="p-4">book.author</td>
-          <td class="p-4">book.isbn</td>
-          <td class="p-4">book.timesRead</td>
+        <tr *ngFor="let book of books" key="book._id">
+          <td class="table-cell p-4 bg-gray-50">{{ book.title }}</td>
+          <td class="p-4">{{ book.author }}</td>
+          <td class="p-4">{{ book.isbn }}</td>
+          <td class="p-4">{{ book.timesRead }}</td>
         </tr>
       </tbody>
     </table>
