@@ -39,4 +39,12 @@ export class BooksService {
       `https://react-project-humber.herokuapp.com/books/${id}`
     );
   }
+
+  // update rating
+  updateRating(data: any) {
+    return this.http.post(
+      `https://react-project-humber.herokuapp.com/books/update-rating`,
+      data
+    );
+  }
 }

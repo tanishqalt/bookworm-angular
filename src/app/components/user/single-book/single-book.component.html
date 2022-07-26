@@ -1,13 +1,13 @@
 <div>
   <div class="max-w-5xl pt-20 m-auto">
-    <h1 class="text-4xl font-bold">{{ book.title }}</h1>
-    <p class="text-sm">ISBN# {{ book.isbn }}</p>
-    <p class="mt-4">Description:{{ book.description }}</p>
+    <h1 class="text-4xl font-bold">{{ book?.title }}</h1>
+    <p class="text-sm">ISBN# {{ book?.isbn }}</p>
+    <p class="mt-4">Description:{{ book?.description }}</p>
     <hr class="my-4" />
     <p class="text-red-700">
-      This book has been read {{ book.timesRead }} times!
+      This book has been read {{ book?.timesRead }} times!
     </p>
-    <p class="mt-8 italic">Author: {{ book.author }}</p>
+    <p class="mt-8 italic">Author: {{ book?.author }}</p>
 
     <div>
       <button
@@ -19,8 +19,10 @@
     </div>
     <hr class="mt-7" />
     <p class="my-4">Ratings</p>
-    <div class="flex space-y-4">
-      <p class="text-sm">rating.username rated this book rating.rating</p>
+    <div *ngFor="let rating of book?.ratings" class="flex space-y-4">
+      <p class="text-sm">
+        {{ rating?.username }} rated this book {{ rating?.rating }}
+      </p>
     </div>
 
     <hr class="my-4" />
@@ -28,15 +30,21 @@
     <div>
       <p>Rate the book</p>
     </div>
-    <select value="currentRating" onChange="handleSelectOnChange">
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-    </select>
-    <button onClick="{}" class="p-3 mt-4 text-white bg-black rounded-xl">
-      Rate
-    </button>
+    <form [formGroup]="ratingForm" (ngSubmit)="updateRating()">
+      <select
+        formControlName="rating"
+        value="currentRating"
+        onChange="handleSelectOnChange"
+      >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+      <button onClick="{}" class="p-3 mt-4 text-white bg-black rounded-xl">
+        Rate
+      </button>
+    </form>
   </div>
 </div>
